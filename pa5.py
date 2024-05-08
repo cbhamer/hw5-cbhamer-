@@ -53,8 +53,11 @@ def bisection_root(func, x1, x2):
   
         x_mid = (x1 + x2) / 2
         y_mid = func(x_mid)
-   
-        if y_mid * y1 < 0:
+
+        if abs(y_mid) <= 0.001:
+            return x_mid
+        
+        elif y_mid * y1 < 0:
             return bisection_helper(x1, x_mid)
       
         return bisection_helper(x_mid, x2)
