@@ -16,7 +16,7 @@ def remove_pairs(stri):
     that doesn't have opposite paired diretions that are adjacent
     """
     if len(stri) <= 1:
-        return str
+        return stri
 
     if stri[0] == directions(stri[1]):
         return remove_pairs(stri[2:])
