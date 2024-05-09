@@ -15,13 +15,13 @@ def remove_pairs(stri):
     takes the string of a path for a maze and returns a filtered string
     that doesn't have opposite paired diretions that are adjacent
     """
-    if len(stri) <= 1:
-        return stri
+    if len(str) <= 1:
+        return str
 
-    if stri[0] == directions(stri[1]):
-        return remove_pairs(stri[2:])
+    if str[0] == directions(str[1]):
+        return remove_pairs(str[2:])
 
-    return stri[0] + remove_pairs(stri[1:])
+    return str[0] + remove_pairs(str[1:])
 
 def directions(d):
     """
