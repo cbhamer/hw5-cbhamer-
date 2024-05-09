@@ -10,7 +10,7 @@ def gcd(a, b):
 
     return gcd(b, a % b)
 
-def remove_pairs(stri):
+def remove_pairs(str):
     """
     takes the string of a path for a maze and returns a filtered string
     that doesn't have opposite paired diretions that are adjacent
