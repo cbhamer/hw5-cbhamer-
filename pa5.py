@@ -44,9 +44,9 @@ def bisection_root(func, x1, x2):
         y1 = func(x1)
         y2 = func(x2)
    
-        if abs(y1) <= 0.001:
+        if abs(y1) <= 10**-7:
             return x1
-        elif abs(y2) <= 0.001:
+        elif abs(y2) <= 10**-7:
             return x2
         elif (y1 > 0 and y2>0) or (y1<0 and y2<0):
             raise ValueError('Roots must be opposites of each other')
@@ -54,7 +54,7 @@ def bisection_root(func, x1, x2):
         x_mid = (x1 + x2) / 2
         y_mid = func(x_mid)
 
-        if abs(y_mid) <= 0.001:
+        if abs(y_mid) <= 10**-7:
             return x_mid
         
         elif y_mid * y1 < 0:
